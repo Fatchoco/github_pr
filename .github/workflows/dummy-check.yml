@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  always-pass:
+    name: always-pass
+    runs-on: ubuntu-latest
+    steps:
+      - name: Succeed
+        run: echo "Dummy check - always succeeds."
